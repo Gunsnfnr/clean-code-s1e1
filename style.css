@@ -90,7 +90,7 @@ h3 {
   display: block;
   margin: 0 0 20px;
 }
-#new-task {
+.main__adding .main__text {
   width: 318px;
 }
 
@@ -129,7 +129,7 @@ h3 {
 }
 
 /* Completed */
-.main__complete#completed-tasks .main__label {
+.main__complete .main__label {
   text-decoration: line-through;
   color: #888;
 }
