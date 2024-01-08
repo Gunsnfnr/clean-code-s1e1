@@ -16,7 +16,7 @@ const completedTasksHolder = document.getElementById("completed-tasks");//comple
 const createNewTaskElement = function(taskString){
 
     const listItem = document.createElement("li");
-    listItem.className = 'main__item';
+    listItem.className = "main__item";
 
     //input (checkbox)
     const checkBox = document.createElement("input");//checkbx
@@ -32,7 +32,7 @@ const createNewTaskElement = function(taskString){
     const deleteButtonImg = document.createElement("img");//delete button image
 
     label.innerText = taskString;
-    label.className = 'main__label task';
+    label.className = "main__label task";
 
     //Each elements, needs appending
     checkBox.type = "checkbox";
@@ -44,7 +44,8 @@ const createNewTaskElement = function(taskString){
     editButton.className = "main__btn edit";
 
     deleteButton.className = "main__btn delete";
-    deleteButtonImg.src = './remove.svg';
+    deleteButtonImg.src = "./remove.svg";
+    deleteButtonImg.alt = "Delete task";
     deleteButtonImg.className = "main__btn__img";
     deleteButton.appendChild(deleteButtonImg);
 
@@ -77,7 +78,7 @@ const editTask = function() {
     console.log("Change 'edit' to 'save'");
 
     const listItem = this.parentNode;
-    const editInput = listItem.querySelector('input[type=text]');
+    const editInput = listItem.querySelector("input[type=text]");
     const label = listItem.querySelector("label");
     const editBtn = listItem.querySelector(".edit");
     const containsClass = listItem.classList.contains("editMode");
