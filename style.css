@@ -35,7 +35,7 @@
   display: inline-block;
   flex-grow: 1;
 }
-.main__adding__task-wrapper {
+.main__task-wrapper {
   display: flex;
 }
 .ul {
@@ -122,12 +122,12 @@
 .main__item > .main__text {
   width: 226px;
 }
-.main__btn.delete .main__btn__img {
+.main__btn.delete .main__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.main__btn.delete .main__btn__img:hover {
+.main__btn.delete .main__img:hover {
   transform: rotateZ(0);
 }
 
@@ -142,11 +142,11 @@
   display: none;
 }
 
-.main__item.editMode .main__text {
+.main__item.main_edit-mode .main__text {
   display: inline-block;
   width: 224px;
 }
 
-.main__item.editMode .main__label {
+.main__item.main_edit-mode .main__label {
   display: none;
 }

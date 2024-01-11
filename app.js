@@ -46,7 +46,7 @@ const createNewTaskElement = function(taskString){
     deleteButton.className = "main__btn delete";
     deleteButtonImg.src = "./remove.svg";
     deleteButtonImg.alt = "Delete task";
-    deleteButtonImg.className = "main__btn__img";
+    deleteButtonImg.className = "main__img";
     deleteButton.appendChild(deleteButtonImg);
 
     //and appending.
@@ -81,10 +81,10 @@ const editTask = function() {
     const editInput = listItem.querySelector("input[type=text]");
     const label = listItem.querySelector("label");
     const editBtn = listItem.querySelector(".edit");
-    const containsClass = listItem.classList.contains("editMode");
-    //If class of the parent is .editmode
+    const containsClass = listItem.classList.contains("main_edit-mode");
+    //If class of the parent is .main_edit-mode
     if(containsClass) {
-        //switch to .editmode
+        //switch to .main_edit-mode
         //label becomes the inputs value.
         label.innerText = editInput.value;
         editBtn.innerText = "Edit";
@@ -92,8 +92,8 @@ const editTask = function() {
         editInput.value = label.innerText;
         editBtn.innerText = "Save";
     }
-    //toggle .editmode on the parent.
-    listItem.classList.toggle("editMode");
+    //toggle .main_edit-mode on the parent.
+    listItem.classList.toggle("main_edit-mode");
 };
 
 //Delete task.
